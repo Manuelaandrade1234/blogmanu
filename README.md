@@ -1,109 +1,143 @@
-# Agenda de Contatos
+# Blog Codar
 
-A **Agenda de Contatos** é uma aplicação web desenvolvida em PHP para cadastrar e gerenciar contatos de forma simples e organizada.
+O **Blog Codar** é um projeto web desenvolvido em PHP com foco na publicação e organização de conteúdos relacionados à programação e tecnologia.
 
-O projeto permite armazenar informações como nome, telefone e observações, além de oferecer operações completas de cadastro, consulta, edição e exclusão dos registros.
+A aplicação apresenta diferentes posts sobre desenvolvimento de software, linguagens de programação e conceitos importantes para quem está estudando ou trabalhando na área de tecnologia.
 
 ## Sobre o projeto
 
-A aplicação foi desenvolvida com o objetivo de colocar em prática conceitos de desenvolvimento Back-End com PHP, integração com banco de dados e manipulação de informações através de operações CRUD.
+O projeto foi desenvolvido para praticar conceitos de desenvolvimento web utilizando PHP, além de trabalhar com organização de arquivos, componentes reutilizáveis e exibição dinâmica de informações.
 
-Os contatos cadastrados ficam armazenados no banco de dados e podem ser gerenciados diretamente pela interface do sistema.
+Os conteúdos dos posts são armazenados em estruturas de dados em PHP e exibidos automaticamente nas páginas do blog.
 
 ## Principais funcionalidades
 
-- Cadastro de contatos
-- Listagem de contatos cadastrados
-- Visualização individual de contatos
-- Edição de contatos
-- Exclusão de contatos
-- Cadastro de nome
-- Cadastro de telefone
-- Campo para observações
-- Mensagens de confirmação após as operações
-- Persistência das informações no banco de dados
+- Listagem de posts na página inicial
+- Visualização individual de cada publicação
+- Exibição de título e descrição dos posts
+- Imagens para cada publicação
+- Sistema de tags
+- Listagem de categorias
+- Navegação entre as páginas do blog
+- Estrutura reutilizável de cabeçalho e rodapé
 
-## CRUD
+## Conteúdos do blog
 
-O sistema implementa as principais operações de um CRUD:
+O projeto possui publicações relacionadas a temas como:
 
-- **Create:** criação de novos contatos
-- **Read:** consulta e visualização dos contatos
-- **Update:** atualização das informações cadastradas
-- **Delete:** exclusão de contatos
+- PHP
+- Java
+- Programação Orientada a Objetos
+- Lógica de programação
+- Algoritmos
+- Desenvolvimento web
+
+## Categorias
+
+O blog possui categorias relacionadas às principais tecnologias estudadas no desenvolvimento web e de software:
+
+- PHP
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Java
+- C#
 
 ## Tecnologias utilizadas
 
 - PHP
 - HTML5
 - CSS3
-- MySQL
-- PDO
-- Bootstrap
-- Font Awesome
-
-## Banco de dados
-
-A aplicação utiliza banco de dados para armazenar os contatos cadastrados.
-
-Cada contato pode possuir informações como:
-
-- Nome
-- Telefone
-- Observações
-
-A comunicação entre PHP e banco de dados é realizada utilizando **PDO**, com consultas preparadas para executar as operações do sistema.
 
 ## Estrutura do projeto
 
 ```text
-agenda/
-│
-├── config/
-│   ├── connection.php
-│   ├── process.php
-│   └── url.php
+blogmanu/
 │
 ├── css/
-│   └── styles.css
+│   └── style.css
+│
+├── data/
+│   ├── categories.php
+│   └── posts.php
+│
+├── helpers/
+│   └── url.php
 │
 ├── img/
 │
-├── templates/
+├── templetes/
 │   ├── header.php
-│   ├── footer.php
-│   └── backbtn.html
+│   └── footer.php
 │
-├── create.php
-├── edit.php
+├── categorias.php
+├── contatos.php
 ├── index.php
-└── show.php
+├── post.php
+└── sobre.php
 ```
 
-## Como funciona
+## Organização dos dados
 
-Na página inicial, o usuário pode visualizar todos os contatos cadastrados.
+Os posts são armazenados no arquivo:
 
-Para cada contato, o sistema disponibiliza opções para:
+```text
+data/posts.php
+```
 
-- Visualizar informações
-- Editar dados
-- Excluir o contato
+Cada publicação possui informações como:
 
-Também é possível cadastrar um novo contato informando nome, telefone e observações.
+- ID
+- Título
+- Descrição
+- Tags
+- Imagem
+
+As categorias são organizadas separadamente no arquivo:
+
+```text
+data/categories.php
+```
+
+Essa estrutura permite que o conteúdo seja exibido dinamicamente utilizando PHP.
+
+## Página de publicação
+
+Cada post possui uma página individual acessada através de seu identificador.
+
+O sistema utiliza o parâmetro `id` da URL para localizar e apresentar o conteúdo correspondente.
+
+Exemplo:
+
+```text
+post.php?id=1
+```
 
 ## Objetivo do projeto
 
-O projeto foi desenvolvido com o objetivo de praticar conceitos importantes de desenvolvimento web, incluindo:
+O Blog Codar foi desenvolvido com o objetivo de praticar:
 
-- Desenvolvimento Back-End com PHP
-- Integração com banco de dados
-- Utilização de PDO
-- Consultas SQL
-- Formulários HTML
-- Operações CRUD
-- Organização de arquivos e componentes
-- Manipulação de sessões em PHP
+- Desenvolvimento web com PHP
+- Manipulação de arrays
+- Estruturas de repetição
+- Parâmetros via URL
+- Organização de projetos PHP
+- Reutilização de componentes
+- Exibição dinâmica de conteúdo
+- HTML e CSS
+
+## Status do projeto
+
+O projeto está em desenvolvimento e pode receber melhorias futuras, como:
+
+- Conteúdo completo para os posts
+- Página de categorias funcional
+- Página Sobre
+- Página de contato
+- Busca de publicações
+- Banco de dados
+- Área administrativa para criação de posts
 
 ## Desenvolvedora
 
